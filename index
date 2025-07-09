@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Basic Salesforce Test Form</title>
+</head>
+<body>
+    <h2>Basic Web-to-Lead Test</h2>
+    
+    <form action="https://webto.salesforce.com/servlet/servlet.WebToLead" method="POST">
+        <!-- Your Organization ID -->
+        <input type="hidden" name="oid" value="00D4x000006sLxp">
+        
+        <!-- Debug enabled -->
+        <input type="hidden" name="debug" value="1">
+        <input type="hidden" name="debugEmail" value="sean.madelmayer@gmail.com">
+        
+        <!-- Return URL -->
+        <input type="hidden" name="retURL" value="https://www.google.com">
+        
+        <p>
+            <label for="first_name">First Name:</label><br>
+            <input type="text" id="first_name" name="first_name" required>
+        </p>
+        
+        <p>
+            <label for="last_name">Last Name:</label><br>
+            <input type="text" id="last_name" name="last_name" required>
+        </p>
+        
+        <p>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required>
+        </p>
+        
+        <p>
+            <input type="submit" value="Submit Test Lead">
+        </p>
+    </form>
+    
+    <h3>Instructions:</h3>
+    <ol>
+        <li>Fill out the form with test data</li>
+        <li>Click Submit</li>
+        <li>Check your email (sean.madelmayer@gmail.com) for debug info</li>
+        <li>Check Salesforce Leads for new record</li>
+    </ol>
+</body>
+</html>
